@@ -13,11 +13,13 @@ Moment provided the current time functionality for this application. Moment is u
 I used jQuery targeting techniques to target elements from the HTML on my javascript. I used jQuery selectors to target items such as class, id, and headings. I used if/else statements to compare the current time and the top displayed on the planner and assigned the correct class of past, future, or present, based on that comparison. Finally, I added event listeners for my save buttons so that when the save button was clicked, it saved the description box's content to local storage. That way, it persists when the page is refreshed! 
 
 ## Final Thoughts
-This assignment was challenging, but we had all of the tools to complete it. I chose to hard-code because it is easier for me to work through and understand, but I also understand how important dynamically generating content is. I plan to work back through this assignment with all dynamically generated content in the future! 
+This assignment was challenging, but we had all of the tools to complete it. I personally chose to hard-code because the application is made of one static page that does not change other than the text area, but I also understand how important dynamically generating content is. I plan to work back through this assignment with all dynamically generated content in the future! 
 
 ## Links 
 link to github repository: https://github.com/jadavianett/Day-Planner 
 link to deployed application: https://jadavianett.github.io/Day-Planner/
+
+![alt text](homepage.png "Day Planner")
 
 
 
