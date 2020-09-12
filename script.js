@@ -1,27 +1,29 @@
-var nineAm = moment().format("9");
-var tenAm = moment().format("10");
-var elevenAm = moment().format("11");
-var twelvePm = moment().format("12");
-var onePm = moment().format("13");
-var twoPm = moment().format("14");
-var threePm = moment().format("15");
-var fourPm = moment().format("16");
-var fivePm = moment().format("17");
+var nineAm = moment("0900").format('HHmm');
+var tenAm = moment("1000").format("HHmm");
+var elevenAm = moment("1100").format("HHmm");
+var twelvePm = moment("1200").format("HHmm");
+var onePm = moment("1300").format("HHmm");
+var twoPm = moment("1400").format("HHmm");
+var threePm = moment("1500").format("HHmm");
+var fourPm = moment("1600").format("HHmm");
+var fivePm = moment("1700").format("HHmm");
 
 
 // local storage
 
 // var todos = $("<textarea>");
 // var todoList = JSON.parse(localStorage.getItem("todoList")) || [];
+
+
+
 // setting up current day variable
 var currentDay = $("<h1>");
 currentDay.text(moment().format("dddd, MMMM Do YYYY"));
 $("#currentDay").append(currentDay);
 
 //hard code for now to test
-var currentTime = moment().format('13');
-//  var currentTime = moment().format('h')
-console.log(currentTime);
+ var currentTime = moment().format('HHmm');
+
 
 if (currentTime > nineAm) {
   console.log("In the past");
@@ -125,4 +127,13 @@ if (currentTime > fivePm) {
 var saveButton = $(".saveBtn");
 saveButton.on("click", function() {
   console.log("you clicked a save button");
+
+  var timeKey = $(this).attr("time");
+  var userInput = $(this).siblings("textarea.description").val();
+  
+  localStorage.setItem(timeKey,userInput);
+
 });
+
+$("#9am").val(localStorage.getItem("9am"));
+$("#10am").val(localStorage.getItem("10am"));
