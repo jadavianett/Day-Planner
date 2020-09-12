@@ -34,6 +34,7 @@ $("#currentDay").append(currentDay);
 //var to set up the current time variable
 var currentTime = moment().hour();
 
+
 //  if else statements to get the color to update depending on the time
 if (currentTime > nineAm) {
   $("#9am").addClass("past col-sm-8");
